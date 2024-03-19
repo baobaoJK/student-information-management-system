@@ -14,7 +14,7 @@
 
 
 
-![image-20240318211349808](images\结构.png)
+![image-20240318211349808](./images/结构.png)
 
 ## 项目结构
 
@@ -103,22 +103,22 @@
 
 ### 登录页面
 
-![login](images\login.png)
+![login](./images/login.png)
 
 ### 学生信息显示
 
-![student](images\student.png)
+![student](./images/student.png)
 
 ### 添加学生信息
 
-![add](images\add.png)
+![add](./images/add.png)
 
 ### 查询学生信息
 
-![search1](images\search1.png)
+![search1](./images/search1.png)
 
-![search2](images\search2.png)
+![search2](./images/search2.png)
 
 ### 更新学生信息
 
-![update](images\update.png)
+![update](./images/update.png)
