@@ -1,0 +1,31 @@
+.update {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.update-form {
+    width: 500px;
+}
+
+.update-form-item {
+    width: 100%;
+    height: 32px;
+    margin-bottom: 16px;
+}
+
+.update-form-item label {
+    width: 20%;
+}
+
+.update-form-item input {
+    width: calc(80% - 8px);
+    height: 100%;
+}
+
+.submit {
+    width: 100%;
+}

@@ -1,0 +1,43 @@
+package org.sd.servlet;
+
+import org.sd.dao.DaoFromDB;
+import org.sd.entity.Grade;
+import org.sd.entity.Student;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+
+/**
+ * @author KSaMar
+ * @version 1.0
+ * 添加学生信息
+ */
+public class InsertServlet extends HttpServlet {
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.setCharacterEncoding("UTF-8");
+        resp.setContentType("text/html;charset=UTF-8");
+        String id = req.getParameter("id");
+        String name = req.getParameter("name");
+        String age = req.getParameter("age");
+        String tel = req.getParameter("tel");
+        String address = req.getParameter("address");
+        String gid = req.getParameter("gid");
+        int gid1 = Integer.parseInt(gid);
+        DaoFromDB db = new DaoFromDB();
+        boolean result = db.insert(id, name, age, tel, address, gid1);
+        if (result) {
+            int currentPage = Integer.parseInt(req.getParameter("currentPage"));
+            req.getSession().setAttribute("currentPage", currentPage);
+            ArrayList<Student> students = db.display(currentPage);
+            req.setAttribute("students", students);
+            req.getRequestDispatcher("/admin/display.jsp").forward(req, resp);
+        }
+    }
+}

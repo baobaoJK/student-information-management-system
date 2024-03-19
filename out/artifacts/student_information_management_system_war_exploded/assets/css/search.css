@@ -1,0 +1,19 @@
+.search {
+    width: 100%;
+    height: 100%;
+}
+
+.search-form-item {
+    display: flex;
+    height: 36px;
+}
+
+.search-form-item label {
+    line-height: 36px;
+}
+
+.search-form-item label,
+.search-form-item input {
+    height: 100%;
+    margin-right: 16px;
+}
